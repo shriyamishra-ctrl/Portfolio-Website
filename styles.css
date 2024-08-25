@@ -1,0 +1,146 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Header Styles */
+  header {
+    width: 100%;
+    background-color: #444;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+  }
+  
+  header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  header nav ul li {
+    margin: 0 15px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  /* Sidebar Styles (Embedded in Header) */
+  .sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    left: -250px;
+    top: 0;
+    transition: 0.3s;
+    z-index: 999;
+    overflow: hidden;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .sidebar img {
+    width: 100%;
+    border-radius: 50%;
+    margin: 20px 0;
+  }
+  
+  .sidebar h2, .sidebar p {
+    margin: 10px;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .main-content {
+    margin-left: 250px;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: margin-left 0.3s ease;
+  }
+  
+  .main-content section {
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #f0f4f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-content section h2 {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #18bc9c;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .main-content section p,
+  .main-content section ul {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+  }
+  
+  .main-content section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .main-content section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .main-content section ul li strong {
+    color: #2c3e50;
+  }
+  
+  .main-content section ul li p {
+    margin: 5px 0 10px 0;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      width: 200px;
+      left: -200px;
+    }
+  
+    .main-content {
+      margin-left: 0;
+      padding: 20px;
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    header nav ul li {
+      margin-bottom: 10px;
+    }
+  }
+  
